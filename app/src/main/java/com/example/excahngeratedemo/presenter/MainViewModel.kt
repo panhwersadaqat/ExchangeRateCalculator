@@ -36,6 +36,9 @@ class MainViewModel @Inject constructor(
             return
         }
 
+        /**
+        launched background thread for network call
+         */
         viewModelScope.launch(dispatchers.io) {
             _conversion.value = CurrencyEvent.Loading
             when(val rateResponse = mainRepository.getRates(fromCurrency)) {

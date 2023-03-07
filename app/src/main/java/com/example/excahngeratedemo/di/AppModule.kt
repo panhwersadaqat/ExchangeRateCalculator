@@ -16,10 +16,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+/**
+network call handling class
+ */
+
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
     @Singleton
     @Provides
     fun provideCurrencyApi(): CurrencyApi = Retrofit.Builder()
@@ -34,6 +37,10 @@ object AppModule {
     @Singleton
     @Provides
     fun provideMainRepository(api: CurrencyApi): MainRepository = DefaultMainRepository(api)
+
+    /**
+    coroutines dispatchers handling
+     */
 
     @Singleton
     @Provides

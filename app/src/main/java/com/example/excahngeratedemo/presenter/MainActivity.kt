@@ -29,6 +29,10 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
+        /**
+        handling of action events.
+         */
+
         lifecycleScope.launchWhenCreated {
             viewModel.conversion.collect { event ->
                 when (event) {

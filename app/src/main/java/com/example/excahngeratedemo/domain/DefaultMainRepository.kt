@@ -6,6 +6,11 @@ import com.example.excahngeratedemo.data.models.CurrencyResponse
 import com.example.excahngeratedemo.util.Resource
 import javax.inject.Inject
 
+/**
+repository class,
+to define route of data,
+whether data will be coming from server or local storage.
+ */
 class DefaultMainRepository @Inject constructor(
     private val api: CurrencyApi
 ) : MainRepository {

@@ -3,6 +3,9 @@ package com.example.excahngeratedemo.data.models
 
 import com.google.gson.annotations.SerializedName
 
+/**
+response class of rates
+ */
 data class Rates(
     @SerializedName("USD")
     val uSD: Double,
